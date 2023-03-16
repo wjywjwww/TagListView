@@ -64,25 +64,25 @@ open class TagListView: UIView {
         }
     }
     
-    @IBInspectable open dynamic var cornerRadius: CGFloat = 0 {
+    @IBInspectable open dynamic var cornerRadius_tg: CGFloat = 0 {
         didSet {
             tagViews.forEach {
-                $0.cornerRadius = cornerRadius
+                $0.cornerRadius_tg = cornerRadius_tg
             }
         }
     }
-    @IBInspectable open dynamic var borderWidth: CGFloat = 0 {
+    @IBInspectable open dynamic var borderWidth_tg: CGFloat = 0 {
         didSet {
             tagViews.forEach {
-                $0.borderWidth = borderWidth
+                $0.borderWidth_tg = borderWidth_tg
             }
         }
     }
     
-    @IBInspectable open dynamic var borderColor: UIColor? {
+    @IBInspectable open dynamic var borderColor_tg: UIColor? {
         didSet {
             tagViews.forEach {
-                $0.borderColor = borderColor
+                $0.borderColor_tg = borderColor_tg
             }
         }
     }
@@ -296,7 +296,7 @@ open class TagListView: UIView {
             tagBackgroundView.frame.size = tagView.bounds.size
             tagView.frame.size.width = max(minWidth, tagView.frame.size.width)
             tagBackgroundView.layer.shadowColor = shadowColor.cgColor
-            tagBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: tagBackgroundView.bounds, cornerRadius: cornerRadius).cgPath
+            tagBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: tagBackgroundView.bounds, cornerRadius: cornerRadius_tg).cgPath
             tagBackgroundView.layer.shadowOffset = shadowOffset
             tagBackgroundView.layer.shadowOpacity = shadowOpacity
             tagBackgroundView.layer.shadowRadius = shadowRadius
@@ -343,9 +343,9 @@ open class TagListView: UIView {
         tagView.highlightedBackgroundColor = tagHighlightedBackgroundColor
         tagView.selectedBackgroundColor = tagSelectedBackgroundColor
         tagView.titleLineBreakMode = tagLineBreakMode
-        tagView.cornerRadius = cornerRadius
-        tagView.borderWidth = borderWidth
-        tagView.borderColor = borderColor
+        tagView.cornerRadius_tg = cornerRadius_tg
+        tagView.borderWidth_tg = borderWidth_tg
+        tagView.borderColor_tg = borderColor_tg
         tagView.selectedBorderColor = selectedBorderColor
         tagView.paddingX = paddingX
         tagView.paddingY = paddingY
