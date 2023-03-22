@@ -127,6 +127,11 @@ open class TagListView: UIView {
             rearrangeViews()
         }
     }
+    @IBInspectable open dynamic var maxRow: Int = Int.max {
+        didSet {
+            rearrangeViews()
+        }
+    }
     
     @objc public enum Alignment: Int {
         case left
@@ -276,6 +281,9 @@ open class TagListView: UIView {
             
             if currentRowTagCount == 0 || currentRowWidth + tagView.frame.width > frameWidth {
                 currentRow += 1
+                if currentRow > self.maxRow {
+                    break
+                }
                 currentRowWidth = 0
                 currentRowTagCount = 0
                 currentRowView = UIView()

@@ -18,7 +18,19 @@ class ViewController: UIViewController, TagListViewDelegate {
         super.viewDidLoad()
         
         tagListView.delegate = self
+        tagListView.maxRow = 6
         tagListView.addTag("TagListView")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
+        tagListView.addTag("TEAChart")
         tagListView.addTag("TEAChart")
         tagListView.addTag("To Be Removed")
         tagListView.addTag("To Be Removed")
